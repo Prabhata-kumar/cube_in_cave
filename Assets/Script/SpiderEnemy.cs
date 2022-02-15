@@ -11,7 +11,7 @@ public class SpiderEnemy : MonoBehaviour
 
     bool Detected = false;
 
-    Vector2 Direction;
+    Vector3 Direction;
 
     public GameObject AlaramLight;
 
@@ -24,6 +24,7 @@ public class SpiderEnemy : MonoBehaviour
     public float FireRate;
 
     float nextTimeFire=0;
+
     public Transform ShootPoint;
 
     public float Force;
@@ -77,7 +78,10 @@ public class SpiderEnemy : MonoBehaviour
     void shoot()
     {
       GameObject BulletIns = Instantiate(Bullet, ShootPoint.position,Quaternion.identity);
-       // BulletIns.GetComponents<Rigidbody2D>().AddForce(Direction * Force); 
+       // Vector3 forcetemp = Direction * Force;
+        Rigidbody2D rb = BulletIns.GetComponent<Rigidbody2D>();
+        rb.AddForce(Direction * Force);
+        
     }
 
     private void OnDrawGizmosSelected()
