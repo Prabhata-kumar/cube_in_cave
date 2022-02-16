@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/lobby.unity
+    guid: 00b972e75fac4e04ab07c5fd3e40793e
+  - enabled: 1
+    path: Assets/Scenes/cube_in_cave.unity
+    guid: 12d1d1bc51818a640998e198cb5a1e41
   m_configObjects: {}

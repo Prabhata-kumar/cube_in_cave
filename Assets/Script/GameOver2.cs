@@ -10,7 +10,7 @@ public class GameOver2 : MonoBehaviour
     public gameOverController2 GameOverController2;
     public GameObject playerDiedText;
     public Button RestartButton;
-    public HealthBar HealthBar;
+    //public HealthBar HealthBar;
     public void Awake()
     {
        RestartButton.onClick.AddListener(RelodeLevel);
