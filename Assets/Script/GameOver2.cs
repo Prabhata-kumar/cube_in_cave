@@ -10,7 +10,7 @@ public class GameOver2 : MonoBehaviour
     public gameOverController2 GameOverController2;
     public GameObject playerDiedText;
     public Button RestartButton;
-
+    public HealthBar HealthBar;
     public void Awake()
     {
        RestartButton.onClick.AddListener(RelodeLevel);
@@ -22,7 +22,7 @@ public class GameOver2 : MonoBehaviour
 
     private void Update()
     {
-       // if (HealthBar >0)
+        
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -32,6 +32,10 @@ public class GameOver2 : MonoBehaviour
             playerDiedText.SetActive(true);
         }
         else if (other.CompareTag("Enemy"))
+        {
+            playerDiedText.SetActive(true);
+        }
+        else if (other.CompareTag("spike"))
         {
             playerDiedText.SetActive(true);
         }

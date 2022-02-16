@@ -23,7 +23,7 @@ public class Eyefollow : MonoBehaviour
         Vector2 direction = new Vector2(
 
             playerPos.x - transform.position.x,
-            playerPos.y + transform.position.y
+            playerPos.y - transform.position.y
             );
         transform.up= direction;
     }

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - player
   - Enemy
+  - bullet
+  - spike
+  - coin
   layers:
   - Default
   - TransparentFX

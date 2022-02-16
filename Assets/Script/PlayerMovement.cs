@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public float Speed;
     public float Jump;
-
+    public ScoreController ScoreController;  
 
     private void Start()
     {
@@ -45,5 +45,19 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(new Vector2(0, Jump),ForceMode2D.Impulse);
         }
     }
-   
+
+    //coin destroy
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("coin"))
+        {
+            PickUpCoin();
+            Destroy(other.gameObject);
+        }
+    }
+    public void PickUpCoin()
+    {
+        ScoreController.IncreaseScore(10);
+    }
+
 }
