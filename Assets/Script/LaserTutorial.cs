@@ -5,9 +5,9 @@ using UnityEngine;
 public class LaserTutorial : MonoBehaviour
 {
     [SerializeField] private float defDistanceRay = 100;
-    public Transform LaserFirePoint;
-    public LineRenderer m_LineRenderer;
-    private Transform m_transform;
+    [SerializeField] private Transform LaserFirePoint;
+    [SerializeField] private LineRenderer m_LineRenderer;
+    [SerializeField] private Transform m_transform;
     // Start is called before the first frame update
      void Awake()
     {

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    public GameObject player;
+    [SerializeField] private GameObject player;
     private Transform playerPos;
     private Vector2 currentPos;
-    public float distance;
-    public float speed;
+    [SerializeField] private float distance;
+    [SerializeField] private float speed;
     // Start is called before the fir
     // st frame update
     void Start()

@@ -5,12 +5,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameOver2 : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
-    public gameOverController2 GameOverController2;
-    public GameObject playerDiedText;
-    public Button RestartButton;
-    //public HealthBar HealthBar;
+    [SerializeField] private gameOverController2 GameOverController2;
+    [SerializeField] private GameObject playerDiedText;
+    [SerializeField] private Button RestartButton;
+    
     public void Awake()
     {
        RestartButton.onClick.AddListener(RelodeLevel);
@@ -20,22 +20,18 @@ public class GameOver2 : MonoBehaviour
         playerDiedText.SetActive(false);
     }
 
-    private void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.CompareTag("Finish"))
+        if (other.tag =="Finish")
         {
             playerDiedText.SetActive(true);
         }
-        else if (other.CompareTag("Enemy"))
+        else if (other.tag =="Enemy")
         {
             playerDiedText.SetActive(true);
         }
-        else if (other.CompareTag("spike"))
+        else if (other.tag =="spike")
         {
             playerDiedText.SetActive(true);
         }

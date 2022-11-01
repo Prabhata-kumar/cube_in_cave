@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public float speed;
-    public int startingPoint;
-    public Transform[] points; //array of transform point
+    [SerializeField] private float speed;
+    [SerializeField] private int startingPoint;
+    [SerializeField] private Transform[] points; //array of transform point
 
     private int i;
     private void Start()

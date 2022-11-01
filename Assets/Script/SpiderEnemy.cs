@@ -5,35 +5,29 @@ using UnityEngine;
 public class SpiderEnemy : MonoBehaviour
 {
 
-    public float Ranger;
+    [SerializeField] private float Ranger;
 
-    public Transform Target;
+    [SerializeField] private Transform Target;
 
     bool Detected = false;
 
     Vector3 Direction;
 
-    public GameObject AlaramLight;
+    [SerializeField] private GameObject AlaramLight;
 
-    public GameObject AlaramLight1;
+    [SerializeField] private GameObject AlaramLight1;
 
-    public GameObject Gun;
+    [SerializeField] private GameObject Gun;
 
-    public GameObject Bullet;
+    [SerializeField] private GameObject Bullet;
 
-    public float FireRate;
+    [SerializeField] private float FireRate;
 
     float nextTimeFire=0;
 
-    public Transform ShootPoint;
+    [SerializeField] private Transform ShootPoint;
 
-    public float Force;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    [SerializeField] private float Force;
 
     // Update is called once per frame
     void Update()

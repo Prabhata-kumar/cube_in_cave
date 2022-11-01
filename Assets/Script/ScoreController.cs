@@ -7,7 +7,7 @@ public class ScoreController : MonoBehaviour
 {
 
     private TextMeshProUGUI scoreText;
-    public int score = 0;
+    [SerializeField] private int score = 0;
     private void Awake()
     {
         scoreText = GetComponent<TextMeshProUGUI>();

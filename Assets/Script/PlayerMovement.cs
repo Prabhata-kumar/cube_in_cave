@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public float Speed;
-    public float Jump;
-    public ScoreController ScoreController;  
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float Speed;
+    [SerializeField] private float Jump;
+    [SerializeField] private ScoreController ScoreController;  
 
     private void Start()
     {
@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     //coin destroy
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("coin"))
+        if (other.gameObject.tag =="coin")
         {
             PickUpCoin();
             Destroy(other.gameObject);
